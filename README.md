@@ -1,2 +1,26 @@
-# wechat-ai-chatbot
-A WeChat-style chat application that simulates conversations based on personality analysis
+# 白甜 · 微信风格聊天模拟器
+
+一个纯前端的聊天风格模拟器，依据用户提供的行为描述和聊天片段，提供可编辑的陪伴式对话体验。
+
+## 使用
+
+直接打开 `index.html` 即可运行，也可以使用任意静态服务器：
+
+```bash
+python3 -m http.server 8000
+```
+
+然后访问 `http://localhost:8000`。
+
+## 功能
+
+- 微信风格聊天窗口和移动端自适应布局
+- 基于关键词和聊天风格的本地回复模拟
+- 本地保存聊天记录（`localStorage`）
+- 可开关“偶尔主动找你”功能（页面保持打开时约每 90 秒随机触发）
+- 查看性格分析与模拟规则
+- 不依赖 API、服务器或第三方库
+
+## 说明
+
+这是根据有限聊天记录做出的虚构模拟，不代表真实人物当前的想法，也不是心理诊断。若要接入真正的 AI，需要增加后端服务和模型 API，并妥善处理聊天记录隐私。

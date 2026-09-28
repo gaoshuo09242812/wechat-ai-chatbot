@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="白甜 · 基于聊天风格的陪伴式对话模拟器" />
+  <title>白甜 · 聊天模拟器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone" aria-label="微信风格聊天模拟器">
+      <header class="topbar">
+        <div class="profile-mini"><div class="avatar">白</div><div><strong>白甜</strong><small>聊天模拟器</small></div></div>
+        <button id="infoBtn" class="icon-button" title="查看性格分析" aria-label="查看性格分析">⋯</button>
+      </header>
+
+      <div id="notice" class="notice">这是基于聊天记录的虚构模拟，不代表她此刻的真实想法。</div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <div id="typing" class="typing" hidden>白甜正在输入…</div>
+
+      <form id="composer" class="composer">
+        <button type="button" id="moodBtn" class="round-button" title="发送一个轻松话题">☺</button>
+        <input id="messageInput" autocomplete="off" placeholder="输入消息…" aria-label="消息内容" />
+        <button class="send-button" type="submit">发送</button>
+      </form>
+      <footer class="controls">
+        <label><input id="proactiveToggle" type="checkbox" checked /> 允许偶尔主动发消息</label>
+        <button id="clearBtn" class="text-button" type="button">清空聊天</button>
+      </footer>
+    </section>
+
+    <aside id="panel" class="panel" hidden>
+      <button id="closePanel" class="close" aria-label="关闭">×</button>
+      <h2>聊天风格参考</h2>
+      <p class="muted">以下内容是根据你提供的行为和文字做出的有限推测，不是心理诊断。</p>
+      <div class="traits"><span>外向</span><span>敏感</span><span>重视细节</span><span>需要陪伴</span><span>珍视自由</span><span>容易内耗</span></div>
+      <h3>模拟规则</h3>
+      <ul><li>回复通常较完整，喜欢分享日常和照片。</li><li>会直接表达需求，但不舒服时可能先冷处理。</li><li>在意纪念日、生日和被记住的细节。</li><li>不使用大量表情包，更偏好自然的文字交流。</li></ul>
+      <p class="disclaimer">请把这里当作整理回忆和练习沟通的工具，而不是替代真实联系或对她下定论。</p>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
